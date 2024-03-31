@@ -36,4 +36,4 @@ figma, opencv, python, gemini
 ## To run the python Code:
 Install  & import the following python libraries: google-generativeai, pytube, ffmpeg, youtube-transcript-api, opencv-python, numpy, matplotlib, pillow
 
-Execute the command from python interactive notebook
+Execute the python interactive notebook.

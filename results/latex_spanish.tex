@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\begin{document}
+
+\title{Sistemas de ecuaciones en forma matricial}
+\author{Profesor Postales}
+\date{\today}
+
+\maketitle
+
+\section{Introducción}
+
+En esta lección, vamos a explicar cómo representar un sistema de ecuaciones en forma matricial y cómo resolverlo usando esa representación.
+
+\section{Representación matricial de un sistema de ecuaciones}
+
+Un sistema de ecuaciones lineales con $n$ ecuaciones y $m$ incógnitas se puede representar en forma matricial como:
+
+$$\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1m} \\\ a_{21} & a_{22} & \cdots & a_{2m} \\\ \vdots & \vdots & \ddots & \vdots \\\ a_{n1} & a_{n2} & \cdots & a_{nm} \end{bmatrix} \begin{bmatrix} x_1 \\\ x_2 \\\ \vdots \\\ x_m \end{bmatrix} = \begin{bmatrix} b_1 \\\ b_2 \\\ \vdots \\\ b_n \end{bmatrix}$$
+
+donde:
+
+* $A$ es la matriz de coeficientes, una matriz $n \times m$ que contiene los coeficientes de las incógnitas.
+* $X$ es la matriz de incógnitas, una matriz $m \times 1$ que contiene las incógnitas del sistema.
+* $B$ es la matriz de términos independientes, una matriz $n \times 1$ que contiene los términos independientes del sistema.
+
+\section{Resolución de sistemas de ecuaciones en forma matricial}
+
+Para resolver un sistema de ecuaciones en forma matricial, podemos utilizar la siguiente fórmula:
+
+$$X = A^{-1}B$$
+
+donde $A^{-1}$ es la matriz inversa de $A$.
+
+\subsection{Cálculo de la matriz inversa}
+
+La matriz inversa de una matriz cuadrada $A$ es una matriz $A^{-1}$ tal que:
+
+$$AA^{-1} = A^{-1}A = I$$
+
+donde $I$ es la matriz identidad.
+
+La matriz inversa de una matriz $A$ se puede calcular usando la fórmula de Cramer:
+
+$$A^{-1} = \frac{C^{adj}}{det(A)}$$
+
+donde:
+
+* $C^{adj}$ es la matriz adjunta de $A$, que es la transpuesta de la matriz de cofactores de $A$.
+* $det(A)$ es el determinante de $A$.
+
+\subsection{Ejemplo}
+
+Consideremos el siguiente sistema de ecuaciones:
+
+$$\begin{align*}
+2x + 5y &= 20 \\\
+-x + 4y &= 7
+\end{align*}$$
+
+Podemos representar este sistema en forma matricial como:
+
+$$\begin{bmatrix} 2 & 5 \\\ -1 & 4 \end{bmatrix} \begin{bmatrix} x \\\ y \end{bmatrix} = \begin{bmatrix} 20 \\\ 7 \end{bmatrix}$$
+
+Calculando la matriz inversa de la matriz de coeficientes, obtenemos:
+
+$$A^{-1} = \frac{1}{13}\begin{bmatrix} 4 & -5 \\\ 1 & 2 \end{bmatrix}$$
+
+Sustituyendo en la fórmula de resolución, obtenemos:
+
+$$\begin{bmatrix} x \\\ y \end{bmatrix} = \frac{1}{13}\begin{bmatrix} 4 & -5 \\\ 1 & 2 \end{bmatrix} \begin{bmatrix} 20 \\\ 7 \end{bmatrix} = \begin{bmatrix} \frac{45}{13} \\\ \frac{34}{13} \end{bmatrix}$$
+
+Por lo tanto, la solución del sistema de ecuaciones es $x = \frac{45}{13}$ e $y = \frac{34}{13}$.
+
+\section{Conclusión}
+
+La representación matricial de los sistemas de ecuaciones permite resolverlos utilizando métodos algebraicos, como el cálculo de la matriz inversa. Este método es especialmente útil para resolver sistemas de ecuaciones grandes o complejos.
+
+\end{document}
